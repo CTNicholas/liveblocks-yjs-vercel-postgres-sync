@@ -11,7 +11,7 @@ import { sql } from "@vercel/postgres";
  */
 
 // "Signing secret" found in a project's webhooks page
-const WEBHOOK_SECRET = "whsec_LQdX6oaQx/9sPhO9p99dR1uTSAcaZ/Sp";
+const WEBHOOK_SECRET = process.env.LIVEBLOCKS_WEBHOOK_SECRET as string;
 const webhookHandler = new WebhookHandler(WEBHOOK_SECRET);
 
 // "Secret key" found in a project's API keys page
